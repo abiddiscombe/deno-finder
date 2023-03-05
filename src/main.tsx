@@ -4,8 +4,8 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
-import { serve } from "httpServer";
-import { h, ssr, tw } from "nanossr";
+import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
+import { h, ssr, tw } from "https://crux.land/nanossr@0.0.2";
 
 import regions from "./regions.ts";
 

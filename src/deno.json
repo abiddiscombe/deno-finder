@@ -13,9 +13,5 @@
 	},
 	"tasks": {
 		"dev": "deno run --allow-net --allow-env --watch main.tsx"
-	},
-  "imports": {
-    "httpServer": "https://deno.land/std@0.114.0/http/server.ts",
-    "nanossr": "https://crux.land/nanossr@0.0.2"
-  }
+	}
 }
