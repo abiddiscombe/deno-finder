@@ -1,0 +1,13 @@
+{
+	"fmt": {
+		"include": [
+			"./src"
+		],
+		"lineWidth": 80,
+		"indentWidth": 4,
+		"singleQuote": true
+	},
+	"tasks": {
+		"dev": "deno run --allow-all --watch src/main.tsx"
+	}
+}
