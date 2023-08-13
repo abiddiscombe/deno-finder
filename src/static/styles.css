@@ -24,7 +24,7 @@ body {
 
 header {
     margin: 0;
-    padding: 2em 3em;
+    padding: 1.6em 2em;
     display: flex;
     justify-content: space-between;
 }
@@ -43,7 +43,6 @@ header > nav > ul {
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 0.4em;
 }
 
 header > nav > ul > li > a {
