@@ -9,10 +9,8 @@ import { requestCounter } from './services/requestCounter.ts';
 
 timeAlive.start();
 
-console.log(Deno.cwd());
-
 const cwd = (Deno.env.get('DENO_REGION') || '')
-    ? ''
+    ? './'
     : path.join(Deno.cwd(), 'src');
 
 const eta = new Eta({
