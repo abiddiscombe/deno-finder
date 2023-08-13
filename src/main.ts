@@ -9,8 +9,12 @@ import { requestCounter } from './services/requestCounter.ts';
 
 timeAlive.start();
 
+const cwd = (Deno.env.get('DENO_REGION'))
+    ? Deno.cwd()
+    : path.join(Deno.cwd(), 'src');
+
 const eta = new Eta({
-    views: path.join(Deno.cwd(), 'src/templates'),
+    views: path.join(cwd, 'templates'),
 });
 const router = new Router();
 const server = new Application();
@@ -27,7 +31,7 @@ router.get('/', (context: RouterContext<'/'>) => {
 router.get('/style', async (context: RouterContext<'/style'>) => {
     // read from fs each time for faster development
     const styles = await Deno.readTextFile(
-        path.join(Deno.cwd(), 'src/static/styles.css'),
+        path.join(cwd, 'static/styles.css'),
     );
     context.response.body = styles;
     context.response.headers.append('Content-Type', 'text/css');
