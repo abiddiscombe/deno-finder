@@ -9,7 +9,7 @@ import { requestCounter } from './services/requestCounter.ts';
 
 timeAlive.start();
 
-const cwd = (Deno.env.get('DENO_REGION'))
+const cwd = (Deno.env.get('DENO_REGION') || '')
     ? Deno.cwd()
     : path.join(Deno.cwd(), 'src');
 
