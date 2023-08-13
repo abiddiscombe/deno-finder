@@ -2,7 +2,6 @@
 import * as path from 'pathTools';
 import { Eta } from 'eta';
 import { Application, Router, type RouterContext } from 'oak';
-import { version } from './services/version.ts';
 import { location } from './services/location.ts';
 import { timeAlive } from './services/timeAlive.ts';
 import { requestCounter } from './services/requestCounter.ts';
@@ -13,8 +12,6 @@ const cwd = (Deno.env.get('DENO_REGION') || '')
     ? './src'
     : path.join(Deno.cwd(), 'src');
 
-console.log(cwd);
-
 const eta = new Eta({
     views: path.join(cwd, 'templates'),
 });
@@ -24,7 +21,6 @@ const server = new Application();
 router.get('/', (context: RouterContext<'/'>) => {
     context.response.body = eta.render('./main', {
         time: timeAlive.lookup(),
-        version: version.lookup(),
         location: location.lookup(),
         requests: requestCounter.hit(),
     });
