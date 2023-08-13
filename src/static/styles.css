@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Open+Sans:wght@500&display=swap');
+
+body {
+    --body-bg: #ffffff;
+    --body-fg: #4d4d4d;
+    --body-sfg: #272727;
+
+    @media (prefers-color-scheme: dark) {
+        --body-bg: #202020;
+        --body-fg: #cacaca;
+        --body-sfg: #fbfbfb;
+    }
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    font-family: Open Sans, -apple-system, BlinkMacSystemFont, avenir next, sans-serif;
+    background-color: var(--body-bg);
+}
+
+/* header */
+
+header {
+    margin: 0;
+    padding: 2em 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: var(--body-fg);
+}
+
+header > nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+header > nav > ul > li > a {
+    margin: 0;
+    padding: 1em;
+    font-size: small;
+    text-decoration: none;
+    color: var(--body-fg);
+}
+
+header > nav > ul > li > a:hover {
+    color: var(--body-sfg);
+    text-decoration: underline;
+}
+
+/* main */
+
+main {
+    margin: 0;
+    padding: 2em;
+    display: grid;
+    place-items: center;
+}
+
+main > section {
+    max-width: 36em;
+    text-align: center;
+}
+
+main > section > p {
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 0;
+    color: var(--body-fg)
+}
+
+main > section > p > span {
+    margin-top: 0.4em;
+    display: block;
+    font-size: 4em;
+    font-weight: 600;
+    font-family: 'Kanit';
+    color: var(--body-sfg);
+    background: -webkit-linear-gradient(#7F00FF, #E100FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main > section > p > strong {
+    color: var(--body-sfg);
+}
+
+/* footer */
+
+footer {
+    margin: 0;
+    padding: 1em;
+    color: var(--body-fg);
+    text-align: center;
+}
+
+footer > small > a {
+    color: var(--body-fg);
+    text-decoration: none;
+}
+
+footer > small > a:hover {
+    color: var(--body-sfg);
+    text-decoration: underline;
+}
