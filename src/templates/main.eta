@@ -1,0 +1,8 @@
+<% layout("./layouts/basic.eta") %>
+
+<main>
+    <section>
+        <p>Your nearest Deno Deploy region is... <span><%= it.location.name %></span> <code><%= it.location.id %></code></p>
+        <p>Deno Deploy is currently running Deno version <strong><%= it.version.deno %></strong>, with TypeScript <strong><%= it.version.ts %></strong> and V8 Engine <strong><%= it.version.v8 %></strong>. This isolate instance has been running for <strong><%= it.time %></strong> seconds and has served <%= it.requests %> requests.
+    </section>
+</main>

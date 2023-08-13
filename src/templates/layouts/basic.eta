@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style">
+        <title>Deno Finder</title>
+    </head>
+    <body>
+        <header>
+            <h1>Deno Finder</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a target='_blank' href="https://deno.com/deploy/docs/regions">
+                            Region List
+                        </a>
+                    </li>
+                    <li>
+                        <a target='_blank' href="https://github.com/abiddiscombe/deno-finder">
+                            View Source
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <%~ it.body %>
+        <footer>
+            <small>Made by <a target='_blank' href='https://github.com/abiddiscombe'>
+                @abiddiscombe
+            </a></small>
+        </footer>
+    </body>
+</html>
