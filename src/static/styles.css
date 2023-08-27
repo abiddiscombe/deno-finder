@@ -68,21 +68,49 @@ main {
 }
 
 main > section {
-    max-width: 36em;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2em;
 }
 
-main > section > p {
+main > section > img {
+    padding: 0;
+    max-height: 8em;
+    border-radius: 4em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    user-select: none;
+}
+
+@media screen and (min-width: 900px) {
+    main > section {
+        align-items: center;
+        flex-direction: row;
+        gap: 6em;
+    }
+
+    main > section > img {
+        max-height: 22em;
+        border-radius: 1em;
+    }
+
+}
+
+main > section > div {
+    max-width: 24em;
+    text-align: left;
+}
+
+main > section > div > p {
     margin: 0;
-    margin-bottom: 2em;
+    margin-top: 1em;
     padding: 0;
     color: var(--body-fg)
 }
 
-main > section > p > span {
-    margin-top: 0.4em;
+main > section > div > p > span {
     display: block;
-    font-size: 4em;
+    font-size: 5em;
     font-weight: 600;
     font-family: 'Kanit';
     color: var(--body-sfg);
@@ -92,7 +120,7 @@ main > section > p > span {
     -webkit-text-fill-color: transparent;
 }
 
-main > section > p > strong {
+main > section > div > p > strong {
     color: var(--body-sfg);
 }
 

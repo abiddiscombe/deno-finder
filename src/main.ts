@@ -1,7 +1,7 @@
 // main.ts
 import * as path from 'pathTools';
 import { Eta } from 'eta';
-import { Application, Router, type RouterContext } from 'oak';
+import { Application, Router, send, type RouterContext } from 'oak';
 import { location } from './services/location.ts';
 import { timeAlive } from './services/timeAlive.ts';
 import { requestCounter } from './services/requestCounter.ts';
@@ -26,14 +26,12 @@ router.get('/', (context: RouterContext<'/'>) => {
     });
 });
 
-router.get('/style', async (context: RouterContext<'/style'>) => {
-    // read from fs each time for faster development
-    const styles = await Deno.readTextFile(
-        path.join(cwd, 'static/styles.css'),
-    );
-    context.response.body = styles;
-    context.response.headers.append('Content-Type', 'text/css');
-});
+router.get("/static/:path+", async (ctx) => {
+    console.log(Deno.cwd())
+    await send(ctx, ctx.request.url.pathname, {
+      root: `${Deno.cwd()}/src`,
+    });
+  });
 
 server.use(router.routes());
 server.use(router.allowedMethods());

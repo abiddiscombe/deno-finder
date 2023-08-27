@@ -2,7 +2,10 @@
 
 <main>
     <section>
-        <p>Your nearest Deno Deploy region is... <span><%= it.location.name %></span> <code><%= it.location.id %></code></p>
-        <p>This isolate has been live for <strong><%= it.time %></strong> seconds and has served <%= it.requests %> requests.
+        <img src="/static/deno.jpg" alt="Deno dinosaur against a starry sky." />
+        <div>
+            <p>Your nearest Deno Deploy region is... <span><%= it.location.name%></span> <code>aka <%= it.location.id %></code></p>
+            <p>This isolate has been live for <strong><%= it.time %></strong> seconds and has served <strong><%= it.requests === 1 ? '1 request' : `${it.requests} requests` %></strong>.
+        </div>
     </section>
 </main>
