@@ -1,3 +1,6 @@
+> I'm not currently creating 'official' GitHub releases of Deno Finder\
+> The current version is: **2.0.0**
+
 # Deno Finder
 
 With [Deno Deploy](https://deno.com/deploy), your code is deployed at edge locations globally.
