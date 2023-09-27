@@ -8,7 +8,10 @@
     </head>
     <body>
         <header>
-            <h1>Deno Finder</h1>
+            <div>
+                <span aria-hidden="true">🦕</span>
+                <h1>Deno Finder</h1>
+            </div>
             <nav>
                 <ul>
                     <li>

@@ -18,11 +18,11 @@ const eta = new Eta({
 const router = new Router();
 const server = new Application();
 
-router.get('/', (context: RouterContext<'/'>) => {
+router.get('/', async (context: RouterContext<'/'>) => {
     context.response.body = eta.render('./main', {
         time: timeAlive.lookup(),
         location: location.lookup(),
-        requests: requestCounter.hit(),
+        requests: await requestCounter.hit(),
     });
 });
 
