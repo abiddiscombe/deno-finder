@@ -16,12 +16,12 @@
                 <ul>
                     <li>
                         <a target='_blank' href="https://deno.com/deploy/docs/regions">
-                            Region List
+                            Regions
                         </a>
                     </li>
                     <li>
                         <a target='_blank' href="https://github.com/abiddiscombe/deno-finder">
-                            View Source
+                            Source
                         </a>
                     </li>
                 </ul>

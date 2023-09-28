@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Open+Sans:wght@500&display=swap');
-
 body {
     --body-bg: #ffffff;
     --body-fg: #4d4d4d;
@@ -26,7 +24,7 @@ body {
 
 header {
     margin: 0;
-    padding: 1.6em 2em;
+    padding: 1.6em 1.4em;
     display: flex;
     justify-content: space-between;
 }
@@ -39,7 +37,7 @@ header > div {
 header > div > span {
     margin: 0;
     padding: 0 1em 0 0;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: normal;
     color: var(--body-fg);
 }
@@ -77,7 +75,7 @@ header > nav > ul > li > a:hover {
 
 main {
     margin: 0;
-    padding: 2em;
+    padding: 1.4em;
     display: grid;
     place-items: center;
 }
@@ -108,9 +106,11 @@ main > section > img {
         max-height: 22em;
         border-radius: 20em;
         border: 1px solid var(--body-fg);
-        box-shadow: 7px 10px 33px -5px rgba(127,0,255,0.36);
-        -webkit-box-shadow: 7px 10px 33px -5px rgba(127,0,255,0.36);
-        -moz-box-shadow: 7px 10px 33px -5px rgba(127,0,255,0.36);
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 7px 10px 33px -5px rgba(127,0,255,0.36);
+            -webkit-box-shadow: 7px 10px 33px -5px rgba(127,0,255,0.36);
+            -moz-box-shadow: 7px 10px 33px -5px rgba(127,0,255,0.36);
+        }
     }
 
 }
@@ -129,9 +129,10 @@ main > section > div > p {
 
 main > section > div > p > span {
     display: block;
-    font-size: 5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    font-size: 4em;
     font-weight: 600;
-    font-family: 'Kanit';
     color: var(--body-sfg);
     background: -webkit-linear-gradient(#7F00FF, #E100FF);
     background-clip: text;
