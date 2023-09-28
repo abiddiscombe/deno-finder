@@ -28,10 +28,5 @@
             </nav>
         </header>
         <%~ it.body %>
-        <footer>
-            <small>Made by <a target='_blank' href='https://github.com/abiddiscombe'>
-                @abiddiscombe
-            </a></small>
-        </footer>
     </body>
 </html>
