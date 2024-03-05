@@ -12,10 +12,7 @@
     </head>
     <body>
         <header>
-            <div>
-                <span aria-hidden="true">🦕</span>
-                <h1>Deno Finder</h1>
-            </div>
+            <h1>Deno Finder</h1>
             <nav>
                 <ul>
                     <li>
