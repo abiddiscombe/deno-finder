@@ -24,30 +24,19 @@ body {
 
 header {
     margin: 0;
-    padding: 1.6em 1.4em;
+    padding: 1.6em 2em;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-header > div {
-    display: flex;
-    align-items: center;
-}
-
-header > div > span {
-    margin: 0;
-    padding: 0 1em 0 0;
-    font-size: 0.8em;
-    font-weight: normal;
-    color: var(--body-fg);
-}
-
-header > div > h1 {
+header > h1 {
     margin: 0;
     padding: 0;
     font-size: 1.2em;
     font-weight: normal;
     color: var(--body-fg);
+    user-select: none;
 }
 
 header > nav > ul {
@@ -55,13 +44,14 @@ header > nav > ul {
     padding: 0;
     list-style-type: none;
     display: flex;
+    gap: 1em;
     align-items: center;
 }
 
 header > nav > ul > li > a {
     margin: 0;
-    padding: 1em;
-    font-size: small;
+    padding: 1em 0;
+    font-size: 0.9em;
     text-decoration: none;
     color: var(--body-fg);
 }
@@ -97,6 +87,7 @@ main > section > img {
 
 @media screen and (min-width: 900px) {
     main > section {
+        padding-bottom: 3em;
         align-items: center;
         flex-direction: row;
         gap: 6em;
@@ -120,7 +111,7 @@ main > section > img {
 }
 
 main > section > div {
-    max-width: 24em;
+    max-width: 26em;
     text-align: left;
 }
 

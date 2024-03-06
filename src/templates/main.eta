@@ -5,8 +5,8 @@
         <img src="/static/deno.jpg" alt="Deno dinosaur against a starry sky." />
         <div>
             <p>Your nearest Deno Deploy region is... <span><%= it.location.name%></span> <code>aka <%= it.location.id %></code></p>
-            <p>This isolate has been live for <strong><%= it.time %></strong> seconds and has served <strong><%= it.requests.totalSession === 1 ? '1 request' : `${it.requests.totalSession} requests` %></strong>.</p>
-            <p>Deno Finder has recieved <strong><%= it.requests.totalGlobal%></strong> requests in the last 24 hours, with ~ <strong><%= it.requests.percentageViaRegion%></strong>% coming from your region.</p>
+            <p>This instance on Deno Deploy has been alive for <strong><%= Math.floor(it.time) %></strong> seconds and has served <strong><%= it.requests.totalSession %></strong><%= it.requests.totalSession === 1 ? ' request' : ' requests' %>.</p>
+            <p>Deno Finder has received <strong><%= it.requests.totalGlobal%></strong> requests in the last 24 hours, with ~ <strong><%= it.requests.percentageViaRegion%></strong>% coming from your region.</p>
         </div>
     </section>
 </main>
