@@ -13,20 +13,18 @@
     <body>
         <header>
             <h1>Deno Finder</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a target='_blank' href="https://deno.com/deploy/docs/regions">
-                            Region List
-                        </a>
-                    </li>
-                    <li>
-                        <a target='_blank' href="https://github.com/abiddiscombe/deno-finder">
-                            View Source
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <ul>
+                <li>
+                    <a target='_blank' href="https://deno.com/deploy/docs/regions">
+                        Region List
+                    </a>
+                </li>
+                <li>
+                    <a target='_blank' href="https://github.com/abiddiscombe/deno-finder">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
         </header>
         <%~ it.body %>
     </body>

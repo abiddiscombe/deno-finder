@@ -4,91 +4,91 @@ function lookup(regionKey: string) {
       return {
         id: regionKey,
         name: "Tokyo",
-        emoji: "",
+        emoji: "🇯🇵",
       };
 
     case "asia-south1":
       return {
         id: regionKey,
         name: "Mumbai",
-        emoji: "",
+        emoji: "🇮🇳",
       };
 
     case "asia-southeast1":
       return {
         id: regionKey,
         name: "Singapore",
-        emoji: "",
+        emoji: "🇸🇬",
       };
 
     case "australia-southeast1":
       return {
         id: regionKey,
         name: "Sydney",
-        emoji: "",
+        emoji: "🇦🇺",
       };
 
     case "me-west1":
       return {
         id: regionKey,
         name: "Tel Aviv",
-        emoji: "",
+        emoji: "🇮🇱",
       };
 
     case "europe-west2":
       return {
         id: regionKey,
         name: "London",
-        emoji: "",
+        emoji: "🇬🇧",
       };
 
     case "europe-west3":
       return {
         id: regionKey,
         name: "Frankfurt",
-        emoji: "",
+        emoji: "🇩🇪",
       };
 
     case "europe-west4":
       return {
         id: regionKey,
-        name: "Netherlands",
-        emoji: "",
+        name: "the Netherlands",
+        emoji: "🇳🇱",
       };
 
     case "southamerica-east1":
       return {
         id: regionKey,
         name: "São Paulo",
-        emoji: "",
+        emoji: "🇧🇷",
       };
 
     case "us-east4":
       return {
         id: regionKey,
         name: "North Virginia",
-        emoji: "",
+        emoji: "🇺🇸",
       };
 
     case "us-south1":
       return {
         id: regionKey,
         name: "Texas",
-        emoji: "",
+        emoji: "🇺🇸",
       };
 
     case "us-west2":
       return {
         id: regionKey,
         name: "California",
-        emoji: "",
+        emoji: "🇺🇸",
       };
 
     default:
       return {
         id: regionKey,
         name: "Your PC",
-        emoji: "",
+        emoji: "💻",
       };
   }
 }
