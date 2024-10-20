@@ -1,12 +1,9 @@
 <% layout("./layouts/basic.eta") %>
 
 <main>
-    <section>
-        <img src="/static/deno.jpg" alt="Deno dinosaur against a starry sky." />
-        <div>
-            <p>Your nearest Deno Deploy region is... <span><%= it.location.name%></span> <code>aka <%= it.location.id %></code></p>
-            <p>This instance on Deno Deploy has been alive for <strong><%= Math.floor(it.time) %></strong> seconds and has served <strong><%= it.requests.totalSession %></strong><%= it.requests.totalSession === 1 ? ' request' : ' requests' %>.</p>
-            <p>Deno Finder has received <strong><%= it.requests.totalGlobal%></strong> requests in the last 24 hours, with ~ <strong><%= it.requests.percentageViaRegion%></strong>% coming from your region.</p>
-        </div>
-    </section>
+    <div>
+        <h2>Greetings from... <span><%= it.location.name%>!</span></h2>
+        <p>You've just recieved data from part of the <a href="https://deno.com/deploy" target="_blank">Deno Deploy</a> network hosted in <%= it.location.name%> (<%= it.location.id %>). This instance has been active for <strong><%= Math.floor(it.timeAlive) %></strong> seconds and has served <strong><%= it.requests.totalSession %></strong><%= it.requests.totalSession === 1 ? ' request' : ' individual requests' %>.</p>
+        <p>Deno Finder has received <strong><%= it.requests.totalGlobal%></strong> requests in the last 24 hours. <strong><%= it.requests.percentageViaRegion%></strong>% of these have been handled by infrastructure in <%= it.location.name%> <%= it.location.emoji%>.</p>
+    </div>
 </main>
