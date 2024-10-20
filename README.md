@@ -10,6 +10,6 @@ This tool returns the name of [your nearest Deno Deploy edge region](https://den
 
 ## Local Development
 
-This tool is built with [Eta](https://eta.js.org/) and [Oak](https://oakserver.org/).
+This tool is built with [Eta](https://eta.js.org/) and [Hono](https://hono.dev/).
 
 - Dev Server - `deno task dev`

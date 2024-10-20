@@ -1,39 +1,34 @@
-// main.ts
-import * as path from 'pathTools';
 import { Eta } from 'eta';
-import { Application, Router, send, type RouterContext } from 'oak';
-import { location } from './services/location.ts';
-import { timeAlive } from './services/timeAlive.ts';
-import { requestCounter } from './services/requestCounter.ts';
+import { Hono } from 'npm:hono';
+import { serveStatic } from 'npm:hono/deno';
+import { regions } from './_regions.ts';
+import { requests } from './_requests.ts';
 
-timeAlive.start();
+const APP_PORT = 8000;
+const APP_START_TIME = Date.now();
 
-const cwd = (Deno.env.get('DENO_REGION') || '')
-    ? './src'
-    : path.join(Deno.cwd(), 'src');
+const server = new Hono();
 
 const eta = new Eta({
-    views: path.join(cwd, 'templates'),
-});
-const router = new Router();
-const server = new Application();
-
-router.get('/', async (context: RouterContext<'/'>) => {
-    context.response.body = eta.render('./main', {
-        time: timeAlive.lookup(),
-        location: location.lookup(),
-        requests: await requestCounter.hit(),
-    });
+    views: `./src/templates`,
 });
 
-router.get("/static/:path+", async (ctx) => {
-    console.log(Deno.cwd())
-    await send(ctx, ctx.request.url.pathname, {
-      root: `${Deno.cwd()}/src`,
-    });
-  });
+server.get('/', async (c) => {
+    const regionData = regions.lookup();
+    const requestData = await requests.hit();
 
-server.use(router.routes());
-server.use(router.allowedMethods());
+    // Calculate time since instance start.
+    const timeAlive = Date.now() - APP_START_TIME;
+    const timeAlivePretty = (timeAlive / 1000).toFixed(2);
 
-await server.listen({ port: 8000 });
+    return c.html(eta.render('./main', {
+        location: regionData,
+        requests: requestData,
+        timeAlive: timeAlivePretty,
+    }));
+});
+
+server.use('/static/*', serveStatic({ root: './src' }));
+
+// Start HTTP Server
+Deno.serve({ port: APP_PORT }, server.fetch);

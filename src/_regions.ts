@@ -1,6 +1,4 @@
-// location.ts
-
-export const location = {
+export const regions = {
     lookup: () => {
         const regionKey = Deno.env.get('DENO_REGION') || 'localhost';
         return {
