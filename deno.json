@@ -2,10 +2,7 @@
 	"fmt": {
 		"include": [
 			"./src"
-		],
-		"lineWidth": 80,
-		"indentWidth": 4,
-		"singleQuote": true
+		]
 	},
 	"imports": {
 		"eta": "https://esm.sh/eta@3.5.0",
